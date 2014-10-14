@@ -9,6 +9,9 @@ data :: data(){
 	x = 0.0;
 	y = 0.0;
 	theta = 0.0;
+	fp1 = fopen("/Local/psition.csv","a");
+	fprintf(fp1,"x , y , theta \n");
+	fclose(fp1);
 	
 }
 
@@ -29,9 +32,9 @@ void data :: OutData(void){
 	
 
 	
-	fp1 = fopen("/Local/Position.txt","a");
+	fp1 = fopen("/Local/Position.csv","a");
 	
-	fprintf(fp1,"(x , y , theta) = (%lf , %lf , %lf)\n",x,y,theta);
+	fprintf(fp1,"%lf , %lf , %lf\n",x,y,theta);
 	
 	fclose(fp1);
 	
