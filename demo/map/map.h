@@ -1,21 +1,21 @@
-#define mapNo 4
+#define mapNo 4					//使用エリアの数
 
 class map{
 	
 	public:
-		struct Area{
+		struct Area{			//エリア毎の構造体
 			
-			float xMin;
-			float yMin;
-			float xMax;
-			float yMax;
+			float xMin;		//エリアのx座標の最大値
+			float yMin;		//エリアのy座標の最大値
+			float xMax;		//エリアのx座標の最小値
+			float yMax;		//エリアのy座標の最小値
 			
 		};
 		
-		struct Area a[mapNo];
+		struct Area a[mapNo];		//エリアを定義
 		
-		map();
+		map();				//コンストラクタでエリアに情報を持たせる
 		
-		int searchArea(float , float);
+		int searchArea(float , float);	//自分がどこのエリアに居るのかを返す
 		
 };
