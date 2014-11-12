@@ -1,5 +1,5 @@
-#ifndef _DATA_INCLUDE
-#define _DATA_INCLUDE
+#ifndef _DATA_H
+#define _DATA_H
 
 #include "mbed.h"
 
@@ -18,4 +18,4 @@ class data{
 	
 };
 
-#endif	//_DATA_INCLUDE
+#endif	//_DATA_H
