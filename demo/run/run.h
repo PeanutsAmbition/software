@@ -1,3 +1,7 @@
+#ifndef _RUN_INCLUDE
+#define _RUN_INCLUDE
+
+
 #include "QEI.h"
 #define PI 3.14159265359
 #define wheelGain 0	　		//減速速度
@@ -26,4 +30,5 @@ class run{
 		
 };
 		
+#endif	//_RUN_INCLUDE
 
