@@ -1,5 +1,5 @@
-#ifndef _MAP_INCLUDE
-#define _MAP_INCLUDE
+#ifndef _MAP_H
+#define _MAP_H
 
 #define mapNo 4					//使用エリアの数
 
@@ -23,4 +23,4 @@ class map{
 		
 };
 
-#endif	//_MAP_INCLUDE
+#endif	//_MAP_H
