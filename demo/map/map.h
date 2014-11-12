@@ -1,3 +1,6 @@
+#ifndef _MAP_INCLUDE
+#define _MAP_INCLUDE
+
 #define mapNo 4					//使用エリアの数
 
 class map{
@@ -19,3 +22,5 @@ class map{
 		int searchArea(float , float);	//自分がどこのエリアに居るのかを返す
 		
 };
+
+#endif	//_MAP_INCLUDE
