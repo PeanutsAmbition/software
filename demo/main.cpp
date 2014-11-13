@@ -1,14 +1,15 @@
 #include "run.h"
-run r;
+
+
 
 int main(void) {
     
     while(1) {
-        r.straight(1000);
-        r.WheelReset();
+        c_run->straight(1000);
+        c_run->WheelReset();
         wait(1);
-        r.turn(180);
-        r.WheelReset();
+        c_run->turn(180);
+        c_run->WheelReset();
         wait(1);
     }
 }

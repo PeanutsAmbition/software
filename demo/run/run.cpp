@@ -17,7 +17,7 @@ data data;
 
 
 run :: run(){
-	
+	c_run = new run;
 	wheel = 50                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   * PI;
 	RightLength = 0.0;
 	LeftLength = 0.0;
@@ -28,6 +28,10 @@ run :: run(){
 	Length[1] = 0.0;
 	dLength = 0.0;
 	
+}
+
+run::~run(){
+	delete c_run;
 }
 
 void run :: straight(float l){

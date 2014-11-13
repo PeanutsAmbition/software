@@ -183,7 +183,7 @@ public:
      *
      * Sets the pulses and revolutions count to zero.
      */
-    void reset(void);       //エンコーダのリセット
+    void reset(void);
 
     /**
      * Read the state of the encoder.
@@ -199,7 +199,7 @@ public:
      *
      * @return Number of pulses which have occured.
      */
-    int getPulses(void);            //パルスの取得
+    int getPulses(void);
 
     /**
      * Read the number of revolutions recorded by the encoder on the index channel.
