@@ -1,5 +1,5 @@
-#ifndef _RUN_H
-#define _RUN_H
+#ifndef _RUN_INCLUDE
+#define _RUN_INCLUDE
 
 
 #include "QEI.h"
@@ -30,5 +30,5 @@ class run{
 		
 };
 		
-#endif	//_RUN_H
+#endif	//_RUN_INCLUDE
 
