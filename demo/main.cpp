@@ -1,4 +1,4 @@
-#include "run.h"
+#include "MainDefine.h"
 run r;
 
 int main(void) {
@@ -12,4 +12,5 @@ int main(void) {
         wait(1);
     }
 }
+
 
