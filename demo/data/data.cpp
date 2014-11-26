@@ -41,4 +41,3 @@ void data :: OutData(void){
 }
 	
 	
-

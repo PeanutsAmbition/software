@@ -7,14 +7,14 @@ DigitalOut m2(p30);
 
 
 
-cannon::cannon(void)
+Cannon::Cannon(void)
 {
 	t = 0;
 }
 
-void cannon::Fire(void)
+void Cannon::Fire(void)
 {
-	while(1)
+	for(;;)
 	{
       m1 = 1;
 	  m2 = 0;

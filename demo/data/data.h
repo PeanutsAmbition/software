@@ -19,4 +19,3 @@ class data{
 };
 
 #endif	//_DATA_H
-

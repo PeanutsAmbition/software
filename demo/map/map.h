@@ -24,4 +24,3 @@ class map{
 };
 
 #endif	//_MAP_H
-

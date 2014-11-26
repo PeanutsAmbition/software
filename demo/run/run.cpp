@@ -1,7 +1,5 @@
-#include "MainDefine.h"
-
-//#define wheelGain 0	　		//減速速度
-#define speed 0.7			//最高速度
+#include "run.h"
+#include "data.h"
 
 QEI wheelR(p5,p6,NC,100,QEI::X4_ENCODING);
 QEI wheelL(p7,p8,NC,100,QEI::X4_ENCODING);
@@ -147,5 +145,4 @@ void run :: getLength(void){
     dTheta = Theta[1] - Theta[0];
     
 }
-
 
