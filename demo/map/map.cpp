@@ -1,4 +1,4 @@
-#include "map.h"
+#include "MainDefine.h"
 
 
 map :: map(){
@@ -8,7 +8,9 @@ map :: map(){
 	a[2].xMin = 3000.0; a[2].yMin = 1000.0; a[2].xMax = 4000.0; a[2].yMax = 5000.0;
 	a[3].xMin = 1000.0; a[3].yMin = 0.0; 	a[3].xMax = 4000.0; a[3].yMax = 4000.0;
 
-	
+	goal[GOAL_RED] = 0.0;
+	goal[GOAL_YALLOW] = 0.0;
+	goal[GOAL_BLUE] = 0.0;
 }
 
 int map :: searchArea(float x , float y){

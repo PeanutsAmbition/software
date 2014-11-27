@@ -21,6 +21,8 @@ class map{
 		
 		int searchArea(float , float);	//自分がどこのエリアに居るのかを返す
 		
+		
+		float goal[3];
 };
 
 #endif	//_MAP_H
