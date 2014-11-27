@@ -7,11 +7,11 @@ enum
 };
 
 
-public class Cannon
+public class cannon
 {
 public:
-	Cannon(void);
-	//~Cannon(void);
+	cannon(void);
+	//~cannon(void);
 
 	void Fire(void);
 

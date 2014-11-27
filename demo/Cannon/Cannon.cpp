@@ -1,4 +1,4 @@
-#include "Cannon.h"
+#include "MainDefine.h"
 
 
 
@@ -7,12 +7,12 @@ DigitalOut m2(p30);
 
 
 
-Cannon::Cannon(void)
+cannon::cannon(void)
 {
 	t = 0;
 }
 
-void Cannon::Fire(void)
+void cannon::Fire(void)
 {
 	for(;;)
 	{
