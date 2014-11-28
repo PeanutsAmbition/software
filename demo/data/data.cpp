@@ -9,6 +9,9 @@ data :: data(){
 	x = 0.0;
 	y = 0.0;
 	theta = 0.0;
+	servoDeg[0] = 0.0;
+	servoDeg[1] = 0.0;
+	
 	fp1 = fopen("/Local/psition.csv","a");
 	fprintf(fp1,"x , y , theta \n");
 	fclose(fp1);
