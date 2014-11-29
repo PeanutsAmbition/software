@@ -26,3 +26,14 @@ void sensor::encordPSD(void){
 		Length[i] = (10138 / (PSD[i] - 911)) + 6;
 	}
 }
+
+int sensor::GetBallColor(void){
+	unsigned R,G,B;
+	
+	ColorSensor.getRGB(R,G,B);
+	
+	if ((R > B) && (G > B) && (G > 1000)) return BALL_YELLOW; //yellow
+    else if ((R > B) && (R > G)) return BALL_RED;  //red
+    else if ((B > R) && (B > G)) return BALL_BLUE;  //blue
+	else return BALL_COLOR_DEFAULT;
+}
