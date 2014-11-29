@@ -1,5 +1,4 @@
-#include "math.h"
-#include "data.h"
+#include "MainDefine.h"
 LocalFileSystem SeqFile("Local");
 
 FILE *fp1;

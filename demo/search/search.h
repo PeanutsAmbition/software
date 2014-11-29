@@ -6,6 +6,9 @@ class search{
 	public:
 	search();	//コンストラクタ
 	~search();	//デストラクタ
+	void SearchBall();
+	void GetBall();
+	void FireBall();
 };
 
 

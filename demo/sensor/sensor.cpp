@@ -1,4 +1,4 @@
-#include "sensor.h"
+#include "MainDefine.h"
 
 sensor::sensor(){
 	PSD = {

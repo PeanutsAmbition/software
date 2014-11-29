@@ -9,9 +9,12 @@
 #include "servo.h"
 #include "plan.h"
 #include "search.h"
+#include "cannon.h"
+#include "ColorSensor.h"
 
 #include "mbed.h"
 #include "QEI.h"
+#include "math.h"
 
 enum{
 	GOAL_RED,

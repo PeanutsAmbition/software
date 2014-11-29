@@ -1,5 +1,4 @@
-#include "run.h"
-#include "data.h"
+#include "MainDefine.h"
 
 QEI wheelR(p5,p6,NC,100,QEI::X4_ENCODING);
 QEI wheelL(p7,p8,NC,100,QEI::X4_ENCODING);
@@ -36,44 +35,41 @@ void run :: straight(float l){
     
     bool EndFlg = false;
     
-    while(!EndFlg){
-        
-    getLength();
-        
-    
-    
-    
-    m1R = 1;
+	m1R = 1;
     m2R = 0;
            
     m1L = 1;
     m2L = 0;
-    
-    if(Length[0] < l){
-        
-        if(RightLength == LeftLength){
-        
-            pwmR = speed;
-            pwmL = speed;
-                    
-        }else if(RightLength > LeftLength){
-            
-            pwmR = wheelGain;
-            pwmL = speed;
-        
-        }else if(RightLength < LeftLength){
-            
-            pwmR = speed;
-            pwmL = wheelGain;
-            
-        }
-                
-     }else{
-//	 	data.SetStatus(Length , Theta);
-        EndFlg = true;
-            
-     }
-     data.SetStatus(dLength , dTheta);
+    while(1){
+	    
+	    getLength();
+		
+	    if(Length[0] < l){
+	        
+	        if(RightLength == LeftLength){
+	        
+	            pwmR = speed;
+	            pwmL = speed;
+	                    
+	        }else if(RightLength > LeftLength){
+	            
+	            pwmR = wheelGain;
+	            pwmL = speed;
+	        
+	        }else if(RightLength < LeftLength){
+	            
+	            pwmR = speed;
+	            pwmL = wheelGain;
+	            
+	        }
+	                
+	     }else{
+			//data.SetStatus(Length , Theta);
+	        EndFlg = true;
+	            
+	    }
+	    data.SetStatus(dLength , dTheta);
+		if(EndFlg) return; 
     }
             
 }
@@ -95,16 +91,18 @@ void run :: turn(float deg_){
     
 	bool EndFlg = false;
 	
-    while(!EndFlg){
+	m1R = 1;
+    m2R = 0;
+    
+    m1L = 0;
+    m2L = 1;
+	
+    while(1){
         
         getLength();
         
         if((Theta[0] < deg) && (Theta[0] > deg * (-1))){
-            m1R = 1;
-            m2R = 0;
-            
-            m1L = 0;
-            m2L = 1;
+           
             
             if((RightLength + LeftLength) == 0){
                 
@@ -128,6 +126,7 @@ void run :: turn(float deg_){
             EndFlg = true;
         }
         data.SetStatus(dLength , dTheta);
+		if(EndFlg) return;
     }
 }
 
@@ -138,11 +137,12 @@ void run :: getLength(void){
     
     RightLength = wheel * ((wheelR.getPulses() / -614 )/ (18 / 5));
     LeftLength = wheel * ((wheelL.getPulses() / 765) / (18 / 5));
-	Length[0] = (RightLength + LeftLength) / 2;
-	dLength = Length[0] - Length[1];
 	
-    Theta[0] = (RightLength - LeftLength) / 181;
-    dTheta = Theta[1] - Theta[0];
+	Length[0] = (RightLength + LeftLength) / 2;
+	Theta[0] = (RightLength - LeftLength) / 181;
+	
+	dLength = Length[0] - Length[1];
+    dTheta = Theta[0] - Theta[1];
     
 }
 
