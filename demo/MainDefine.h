@@ -14,9 +14,14 @@
 #include "QEI.h"
 
 enum{
-	GOAL_RED = 0,
+	GOAL_RED,
 	GOAL_YELLOW,
 	GOAL_BLUE
 };
 
+enum{
+	BALL_RED,
+	BALL_YELLOW,
+	BALL_BLUE
+}
 #endif	//MAIN_DEFINE_H
