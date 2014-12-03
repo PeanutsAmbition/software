@@ -32,10 +32,10 @@ ColorSensor::ColorSensor(void) {
   unsigned short RGB[3];
   double R, G, B, r,g,b;
 
-  Dout  = new DigitalIn(p5);    // Dout
-  Range = new DigitalOut(p6);   // Range
-  CK    = new DigitalOut(p7);   // CK
-  Gate  = new DigitalOut(p8);   // Gate
+  Dout  = new DigitalIn(p11);    // Dout
+  Range = new DigitalOut(p12);   // Range
+  CK    = new DigitalOut(p13);   // CK
+  Gate  = new DigitalOut(p14);   // Gate
 
   *CK   = 0; //ck
   *Gate = 0; //gate
