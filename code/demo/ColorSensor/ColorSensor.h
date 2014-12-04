@@ -1,8 +1,12 @@
+#ifndef _COLOR_SENSOR_H
+#define _COLOR_SENSOR_H
+
 #include "mbed.h"
 #define RED   0
 #define GREEN 1
 #define BLUE  2
 #define OTHER 3
+
 class ColorSensor
 {
   private:
@@ -21,3 +25,5 @@ class ColorSensor
     int judge();
     void setWhite();
 };
+
+#endif  //_COLOR_SENSOR_H

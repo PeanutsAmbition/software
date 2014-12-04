@@ -1,18 +1,19 @@
 #ifndef	_SENSOR_H
 #define	_SENSOR_H
 
+#include "ColorSensor.h"
 
-AnalogIn	psd1(p17);
-AnalogIn	psd2(p18);
-AnalogIn	psd3(p19);
-AnalogIn	psd4(p20);
+// AnalogIn	psd1(p17);
+// AnalogIn	psd2(p18);
+// AnalogIn	psd3(p19);
+// AnalogIn	psd4(p20);
 
-ColorSensor ColorSensor(p11, p12, p13, p14, 30);
 
 class sensor
 {
 	public:
-		sensor();
+		// オーバーライドしないならなぜ宣言した
+		sensor(AnalogIn psd1, AnalogIn psd2, AnalogIn psd3, AnalogIn pad4);
 		~sensor();
 		
 		float	Length[4];
@@ -20,7 +21,7 @@ class sensor
 		int		GetBallColor(void);
 		
 	private:
-		float	PSD[4];
+		AnalogIn	*PSD;
 	
 };
 

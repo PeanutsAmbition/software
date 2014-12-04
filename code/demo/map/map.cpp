@@ -9,7 +9,7 @@ map :: map(){
 	a[3].xMin = 1000.0; a[3].yMin = 0.0; 	a[3].xMax = 4000.0; a[3].yMax = 4000.0;
 
 	goal[GOAL_RED] = 0.0;
-	goal[GOAL_YALLOW] = 0.0;
+	goal[GOAL_YELLOW] = 0.0;
 	goal[GOAL_BLUE] = 0.0;
 }
 

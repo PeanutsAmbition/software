@@ -1,19 +1,12 @@
 #include "MainDefine.h"
+#include "mbed.h"
+#include <new>
 
-sensor::sensor(){
-	PSD = {
-		psd1,
-		psd2,
-		psd3,
-		psd4
-	};
-	
-	Length = {
-		0,
-		0,
-		0,
-		0
-	};
+using namespace mbed;
+ColorSensor colorSensor(p11, p12, p13, p14, 30);
+
+sensor::sensor(AnalogIn psd1, AnalogIn psd2, AnalogIn psd3, AnalogIn psd4){
+	PSD = new AnalogIn[4] {psd1, psd2, psd3, psd4};
 }
 
 sensor::~sensor(){
@@ -30,7 +23,7 @@ void sensor::encordPSD(void){
 int sensor::GetBallColor(void){
 	unsigned R,G,B;
 	
-	ColorSensor.getRGB(R,G,B);
+	colorSensor.getRGB(R,G,B);
 	
 	if ((R > B) && (G > B) && (G > 1000)) return BALL_YELLOW; //yellow
     else if ((R > B) && (R > G)) return BALL_RED;  //red

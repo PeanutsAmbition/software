@@ -4,7 +4,7 @@
 
 #include "QEI.h"
 #define PI 3.14159265359
-#define wheelGain 0	　		//減速速度
+//#define wheelGain 0.0	　		//減速速度
 #define speed 0.7			//最高速度
 
 
