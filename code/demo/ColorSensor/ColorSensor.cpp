@@ -30,7 +30,7 @@ void ColorSensor::setWhite()
 
 ColorSensor::ColorSensor(void) {
   unsigned short RGB[3];
-  double R, G, B, r,g,b;
+  double R, G, B, r, g, b;
 
   Dout  = new DigitalIn(p11);    // Dout
   Range = new DigitalOut(p12);   // Range

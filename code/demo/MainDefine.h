@@ -9,7 +9,7 @@
 #include "servo.h"
 #include "plan.h"
 #include "search.h"
-#include "cannon.h"
+#include "Cannon.h"
 #include "ColorSensor.h"
 
 #include "mbed.h"
@@ -27,5 +27,5 @@ enum{
 	BALL_YELLOW,
 	BALL_BLUE,
 	BALL_COLOR_DEFAULT
-}
+};
 #endif	//MAIN_DEFINE_H

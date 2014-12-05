@@ -7,7 +7,7 @@ enum
 };
 
 
-public class cannon
+class cannon
 {
 public:
 	cannon(void);
@@ -15,7 +15,7 @@ public:
 
 	void Fire(void);
 
-	int t;	//ƒ‚[ƒ^‚ğ“®‚©‚µ‚Ä‚¢‚éŠÔ
+	int t;	
       
 };
 
