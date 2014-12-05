@@ -25,8 +25,8 @@ int sensor::GetBallColor(void){
 	
 	colorSensor.getRGB(R,G,B);
 	
-	if ((R > B) && (G > B) && (G > 1000)) return BALL_YELLOW; //yellow
-    else if ((R > B) && (R > G)) return BALL_RED;  //red
-    else if ((B > R) && (B > G)) return BALL_BLUE;  //blue
+	if ((R > 3*B) && (G > 2*B) && (R > G)) return BALL_YELLOW; //yellow
+    else if ((R > 2*B) && (R > 2*G)) return BALL_RED;  //red
+    else if ((B > 1.5*R) && (B > G)) return BALL_BLUE;  //blue
 	else return BALL_COLOR_DEFAULT;
 }
