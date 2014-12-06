@@ -1,5 +1,5 @@
 #include "MainDefine.h"
-LocalFileSystem SeqFile("Local");
+//LocalFileSystem SeqFile("Local");
 
 FILE *fp1;
 
