@@ -30,7 +30,7 @@ void data :: SetStatus(float l , float d){
 }
 	
 
-void data :: OutData(void){
+/*void data :: OutData(void){
 	
 
 	
@@ -40,6 +40,6 @@ void data :: OutData(void){
 	
 	fclose(fp1);
 	
-}
+}*/
 	
 	
