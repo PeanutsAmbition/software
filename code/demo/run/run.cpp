@@ -1,5 +1,5 @@
 #include "MainDefine.h"
-#define wheelGain 0.0
+//#define wheelGain 0.0
 
 QEI wheelR(p5,p6,NC,100,QEI::X4_ENCODING);
 QEI wheelL(p7,p8,NC,100,QEI::X4_ENCODING);
@@ -27,6 +27,8 @@ run :: run(){
 	Length[0] = 0.0;
 	Length[1] = 0.0;
 	dLength = 0.0;
+	speed = 0.0;
+	wheelGain = 0.0;
 	
 }
 
