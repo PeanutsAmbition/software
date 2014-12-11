@@ -10,20 +10,14 @@ enum
 class cannon
 {
 public:
-	cannon(void);
-	//~cannon(void);
-
+	/*void turn(void);
+	void resetturn(void);
+*/
 	void Fire(void);
 
 	int t;	
+	int goal;
       
 };
-
-
-
-
-
-
-
 
 #endif	//_CANNON_H
