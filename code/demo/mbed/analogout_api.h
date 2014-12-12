@@ -40,3 +40,4 @@ uint16_t analogout_read_u16 (dac_t *obj);
 #endif
 
 #endif
+

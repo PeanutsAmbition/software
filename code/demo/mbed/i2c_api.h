@@ -56,3 +56,4 @@ void i2c_slave_address(i2c_t *obj, int idx, uint32_t address, uint32_t mask);
 #endif
 
 #endif
+

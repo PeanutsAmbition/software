@@ -47,3 +47,4 @@ void us_ticker_remove_event(ticker_event_t *obj);
 #endif
 
 #endif
+

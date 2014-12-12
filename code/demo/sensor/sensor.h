@@ -6,19 +6,23 @@
 // AnalogIn	psd1(p17);
 // AnalogIn	psd2(p18);
 // AnalogIn	psd3(p19);
-// AnalogIn	psd4(p20);
+ //AnalogIn	psd4(p20);
 
 
 class sensor
 {
 	public:
 		// オーバーライドしないならなぜ宣言した
-		sensor(AnalogIn psd1, AnalogIn psd2, AnalogIn psd3, AnalogIn pad4);
-		~sensor();
 		
-		float	Length[4];
+		float	Length;
 		void	encordPSD(void);
 		int		GetBallColor(void);
+		float data[3];
+		void run(void);
+		void Initrun(void);
+		float sum,ave;
+		int i;
+
 		
 	private:
 		AnalogIn	*PSD;

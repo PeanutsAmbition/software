@@ -50,3 +50,4 @@ static inline int gpio_read(gpio_t *obj) {
 #endif
 
 #endif
+

@@ -29,3 +29,4 @@ enum{
 	BALL_COLOR_DEFAULT
 };
 #endif	//MAIN_DEFINE_H
+

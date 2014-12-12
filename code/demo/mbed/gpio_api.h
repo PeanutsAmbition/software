@@ -49,3 +49,4 @@ void gpio_init_inout(gpio_t* gpio, PinName pin, PinDirection direction, PinMode 
 #endif
 
 #endif
+

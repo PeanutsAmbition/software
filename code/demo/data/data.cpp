@@ -11,9 +11,9 @@ data :: data(){
 	servoDeg[0] = 0.0;
 	servoDeg[1] = 0.0;
 	
-	fp1 = fopen("/Local/psition.csv","a");
+	/*fp1 = fopen("/Local/psition.csv","a");
 	fprintf(fp1,"x , y , theta \n");
-	fclose(fp1);
+	fclose(fp1);*/
 	
 }
 
@@ -30,7 +30,7 @@ void data :: SetStatus(float l , float d){
 }
 	
 
-/*void data :: OutData(void){
+void data :: OutData(void){
 	
 
 	
@@ -40,6 +40,5 @@ void data :: SetStatus(float l , float d){
 	
 	fclose(fp1);
 	
-}*/
-	
-	
+}
+

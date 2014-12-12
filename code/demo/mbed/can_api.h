@@ -78,3 +78,4 @@ void          can_monitor  (can_t *obj, int silent);
 #endif    // MBED_CAN_API_H
 
 #endif
+

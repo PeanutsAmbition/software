@@ -51,3 +51,4 @@ typedef struct CAN_Message CAN_Message;
 #endif
 
 #endif // MBED_CAN_HELPER_H
+

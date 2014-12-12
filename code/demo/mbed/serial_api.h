@@ -76,3 +76,4 @@ void serial_set_flow_control(serial_t *obj, FlowControl type, PinName rxflow, Pi
 #endif
 
 #endif
+

@@ -37,3 +37,4 @@ uint16_t analogin_read_u16(analogin_t *obj);
 #endif
 
 #endif
+

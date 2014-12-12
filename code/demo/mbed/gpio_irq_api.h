@@ -47,3 +47,4 @@ void gpio_irq_disable(gpio_irq_t *obj);
 #endif
 
 #endif
+

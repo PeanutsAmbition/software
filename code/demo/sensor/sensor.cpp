@@ -2,23 +2,42 @@
 #include "mbed.h"
 #include <new>
 
+AnalogIn	psd2(p19);
+
 using namespace mbed;
 ColorSensor colorSensor(p11, p12, p13, p14, 30);
 
-sensor::sensor(AnalogIn psd1, AnalogIn psd2, AnalogIn psd3, AnalogIn psd4){
-	PSD = new AnalogIn[4] {psd1, psd2, psd3, psd4};
+/*sensor::sensor(AnalogIn psd1){
+//PSD = new AnalogIn[4] {psd1, psd2, psd3, psd4} ;
 }
+*/
 
-sensor::~sensor(){
+void sensor::Initrun(void){
+    for (i = 0; i < 3; i++) data[i] = psd2.read();
 }
-
 void sensor::encordPSD(void){
-	
-	int i;
-	for(i=0;i<4;i++){
-		Length[i] = (10138 / (PSD[i] - 911)) + 6;
+    
+    Serial pc(USBTX, USBRX);
+     pc.baud(115200);
+     
+     //ave = psd2.read();
+     //pc.printf("ave = %f\n",ave);
+     
+    for (i = 0; i < 2; i++) {
+        data[i] = data[i + 1];
+    }
+    data[2] = psd2.read();
+    
+    for (i = 0; i < 3; i++) {
+        sum = data[i] + sum;
+    }
+    
+    ave = sum / 3;
+    sum = 0;
+    
+	float Length = 26.649 * pow((ave) * 3.3,-1.209);
+	pc.printf("Length : %4.1f [cm]\n",Length);
 	}
-}
 
 int sensor::GetBallColor(void){
 	unsigned R,G,B;
@@ -30,3 +49,4 @@ int sensor::GetBallColor(void){
     else if ((B > 1.5*R) && (B > G)) return BALL_BLUE;  //blue
 	else return BALL_COLOR_DEFAULT;
 }
+

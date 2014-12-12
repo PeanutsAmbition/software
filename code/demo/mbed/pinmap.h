@@ -41,3 +41,4 @@ uint32_t pinmap_find_peripheral(PinName pin, const PinMap* map);
 #endif
 
 #endif
+

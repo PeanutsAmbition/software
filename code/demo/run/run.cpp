@@ -4,15 +4,16 @@
 QEI wheelR(p5,p6,NC,100,QEI::X4_ENCODING);
 QEI wheelL(p7,p8,NC,100,QEI::X4_ENCODING);
 PwmOut pwmL(p21);
-DigitalOut m1L(p22);
-DigitalOut m2L(p23);
+DigitalOut m1L(p23);
+DigitalOut m2L(p22);
 PwmOut pwmR(p24);
 DigitalOut m1R(p25);
 DigitalOut m2R(p26);
 
 DigitalOut led1(LED1);
 DigitalOut led2(LED2);
-
+DigitalOut led3(LED3);
+DigitalOut led4(LED4);
 data data;
 
 
@@ -27,8 +28,8 @@ run :: run(){
 	Length[0] = 0.0;
 	Length[1] = 0.0;
 	dLength = 0.0;
-	speed = 0.0;
-	wheelGain = 0.0;
+	speed = 0.7;
+	wheelGain = 0.1;
 	
 }
 
@@ -46,35 +47,45 @@ void run :: straight(float l){
     while(1){
 	    
 	    getLength();
-		
+		led1=1;
 	    if(Length[0] < l){
 	        
 	        if(RightLength == LeftLength){
-	        
+	        	led2=1;
 	            pwmR = speed;
 	            pwmL = speed;
-	                    
+	        	wait(0.5);  
+	        	led2=0;
+	        	wait(0.1);          
 	        }else if(RightLength > LeftLength){
-	            
+	            led3=1;
 	            pwmR = wheelGain;
 	            pwmL = speed;
-	        
+	        	wait(0.5); 
+	        	led3=0;
+	        	wait(0.1);
 	        }else if(RightLength < LeftLength){
-	            
+	            led4=1;
 	            pwmR = speed;
 	            pwmL = wheelGain;
-	            
+	            wait(0.5); 
+	            led4=0;
+	            wait(0.1);
 	        }
 	                
 	     }else{
 			//data.SetStatus(Length , Theta);
 	        EndFlg = true;
-	            
+	            led2=1;
+	            led3=1;
+	            led4=1;
+	            pwmR=0;
+	            pwmL=0;
 	    }
 	    data.SetStatus(dLength , dTheta);
 		if(EndFlg) return; 
     }
-            
+            led1=0;
 }
 
 void run :: WheelReset(void){
@@ -148,4 +159,3 @@ void run :: getLength(void){
     dTheta = Theta[0] - Theta[1];
     
 }
-

@@ -287,3 +287,4 @@ void QEI::index(void) {
     revolutions_++;
 
 }
+

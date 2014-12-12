@@ -241,3 +241,4 @@ protected:
 #endif
 
 #endif    // MBED_CAN_H
+
