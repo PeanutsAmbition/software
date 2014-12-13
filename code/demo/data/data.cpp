@@ -30,15 +30,4 @@ void data :: SetStatus(float l , float d){
 }
 	
 
-void data :: OutData(void){
-	
-
-	
-	fp1 = fopen("/Local/Position.csv","a");
-	
-	fprintf(fp1,"%lf , %lf , %lf\n",x,y,theta);
-	
-	fclose(fp1);
-	
-}
 
