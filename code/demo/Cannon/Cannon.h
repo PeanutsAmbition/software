@@ -10,11 +10,12 @@ enum
 class cannon
 {
 public:
-	/*void turn(void);
-	void resetturn(void);
-*/
+	void turn(void);			//ƒ{[ƒ‹‚ÌF‚É‰‚¶‚½ù‰ñ‚ğ‚·‚éŠÖ”
+	void resetturn(void);		//–C“ƒ‚ªù‰ñ‚µ‚½•ª–ß‚éŠÖ”
+
 	void Fire(void);
 
+	float firetheta;
 	int t;	
 	int goal;
       
