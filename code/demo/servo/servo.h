@@ -7,7 +7,9 @@ class servo{
 	public:
 	servo();			//コンストラクタ
 	~servo();			//デストラクタ
-	void move(void);	//サーボを動かす
+	void move(int id,float target);	//サーボを動かす
+	
+	PwmOut Servo[2];
 	
 };
 
