@@ -7,6 +7,7 @@ class plan{
 	public:
 	plan();		//コンストラクタ
 	~plan();	//デストラクタ
+	void RunPlan();
 };
 
 

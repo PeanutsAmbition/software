@@ -3,10 +3,10 @@
 
 QEI wheelR(p5,p6,NC,100,QEI::X4_ENCODING);
 QEI wheelL(p7,p8,NC,100,QEI::X4_ENCODING);
-PwmOut pwmL(p21);
-DigitalOut m1L(p23);
-DigitalOut m2L(p22);
-PwmOut pwmR(p24);
+PwmOut pwmL(p22);
+DigitalOut m1L(p27);
+DigitalOut m2L(p28);
+PwmOut pwmR(p21);
 DigitalOut m1R(p25);
 DigitalOut m2R(p26);
 

@@ -15,7 +15,7 @@ ColorSensor colorSensor(p11, p12, p13, p14, 30);
 void sensor::Initrun(void){
     for (i = 0; i < 3; i++) data[i] = psd2.read();
 }
-void sensor::encordPSD(void){
+bool sensor::GetPSD(void){
     
     Serial pc(USBTX, USBRX);
      pc.baud(115200);
@@ -37,6 +37,7 @@ void sensor::encordPSD(void){
     
 	float Length = 26.649 * pow((ave) * 3.3,-1.209);
 	pc.printf("Length : %4.1f [cm]\n",Length);
+	if(Length<=460.0) return true;
 	}
 
 int sensor::GetBallColor(void){

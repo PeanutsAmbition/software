@@ -15,13 +15,13 @@ class sensor
 		// オーバーライドしないならなぜ宣言した
 		
 		float	Length;
-		void	encordPSD(void);
+		bool	GetPSD(void);
 		int		GetBallColor(void);
-		float data[3];
-		void run(void);
-		void Initrun(void);
-		float sum,ave;
-		int i;
+		float 	data[3];
+		void 	run(void);
+		void 	Initrun(void);
+		float 	sum,ave;
+		int 	i;
 
 		
 	private:
