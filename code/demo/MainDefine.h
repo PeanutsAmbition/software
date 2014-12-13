@@ -11,6 +11,7 @@
 #include "search.h"
 #include "Cannon.h"
 #include "ColorSensor.h"
+#include "control.h"
 
 #include "mbed.h"
 #include "QEI.h"
@@ -27,6 +28,10 @@ enum{
 	BALL_YELLOW,
 	BALL_BLUE,
 	BALL_COLOR_DEFAULT
+};
+enum{
+	FUN_RUN,
+	FUN_STOP
 };
 #endif	//MAIN_DEFINE_H
 

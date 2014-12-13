@@ -8,6 +8,8 @@ class search{
 	~search();	//デストラクタ
 	void SearchBall();
 	void GetBall();
+	void FireBall();
+	void Fun(int mode);
 	float Search_theta;
 	float default_x;
 	float default_y;
