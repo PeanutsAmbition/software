@@ -1,5 +1,7 @@
 #include "MainDefine.h"
 
+PwmOut servo1(p23);
+PwmOut servo2(p24);
 data data;
 
 servo::servo(){
